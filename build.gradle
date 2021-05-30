@@ -2,6 +2,9 @@ plugins {
 	id 'org.springframework.boot' version '2.5.0'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+
+	// avro
+	id "com.github.davidmc24.gradle.plugin.avro" version "1.2.0"
 }
 
 group = 'com.dio.projeto'
@@ -16,6 +19,7 @@ configurations {
 
 repositories {
 	mavenCentral()
+	gradlePluginPortal()
 	maven { url 'https://repo.spring.io/snapshot' }
 	maven { url 'https://repo.spring.io/milestone' }
 }
@@ -36,6 +40,9 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.kafka:spring-kafka-test'
+
+	// https://mvnrepository.com/artifact/org.apache.avro/avro
+	implementation group: 'org.apache.avro', name: 'avro', version: '1.10.2'
 }
 
 dependencyManagement {
