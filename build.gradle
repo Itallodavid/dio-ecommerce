@@ -41,6 +41,9 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.kafka:spring-kafka-test'
 
+	// PostgreSQL
+	runtimeOnly 'org.postgresql:postgresql'
+
 	// https://mvnrepository.com/artifact/org.apache.avro/avro
 	implementation group: 'org.apache.avro', name: 'avro', version: '1.10.2'
 
