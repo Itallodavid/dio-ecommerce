@@ -43,6 +43,9 @@ dependencies {
 
 	// https://mvnrepository.com/artifact/org.apache.avro/avro
 	implementation group: 'org.apache.avro', name: 'avro', version: '1.10.2'
+
+	// Spring JPA
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 }
 
 dependencyManagement {
